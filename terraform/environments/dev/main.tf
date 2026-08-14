@@ -13,3 +13,8 @@ module "security_groups" {
   vpc_id      = module.vpc.vpc_id
   environment = var.environment
 }
+
+module "ecr" {
+  source      = "../../modules/ecr"
+  environment = var.environment
+}
